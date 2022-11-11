@@ -5,8 +5,9 @@
 •	Users shall be able to delete their posted images 
 •	Users shall be able to edit their profiles 
 
-3 tables:
+4 tables:
 Users:
+User_id
 FName
 LName
 Username
@@ -15,8 +16,14 @@ Password
 Images:
 User_id
 Image_id
-Comment
 Like_count
+Image_URL
+
+Comments:
+User_id (posted by)
+Comment_id
+Image_id
+Comment
 
 Visibility
 User1_id
@@ -32,3 +39,14 @@ pages:
 		-L profile info (edit profile)
 		-R BlockList (input obx to block users)
  
+APIs:
+1- Login
+2- Register
+3- EditProfile
+4- get_Images (by User)
+5- get_Comments (by post)
+6- get_LikeCount
+6- AddPost
+7- AddLike
+8- AddComment
+9- BlockUser
