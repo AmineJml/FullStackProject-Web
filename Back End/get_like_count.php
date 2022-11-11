@@ -15,18 +15,11 @@ if(isset($_GET["Image_id"]) ){
 }
 
 
-$query = $mysqli->prepare("SELECT Comment FROM comments WHERE Image_id = ?");
-$query->bind_param("i", $Image_id);
+$query = $mysqli->prepare("SELECT Like_count FROM images WHERE Image_id = ?");
+$query->bind_param("i", $Img_id);
 $query->execute();
 
 $array = $query->get_result();
 $response = [];
-while($comments = $array->fetch_assoc()){
-    $response[] = $comments;
-}
-
-if(!$response ){ //list is empty
-    $response["success"] = "no_comments_for_this_post";   
-}
-
+$response[] = $array->fetch_asoc();
 echo json_encode($response);
