@@ -44,6 +44,9 @@ body{
     object-fit: cover;
 }
 
+.card-info{
+    display: inline-block;
+}
 .card-content{
     padding: 3rem
 }
@@ -58,30 +61,30 @@ body{
 
 
 .card-btn{
-    display: block;
-    width:100%;
+    display: inline-block;
+    width:50%;
     padding:1.5rem;
     font-size: 2rem;
     text-align:center;
     color: #3363ff;
-    background-color: #d8e0fd;
+    background-color: #c6d2ff;
     border:none;
-    border-radius: 0.4rem;
+    border-radius: 10rem;
     transition: 0.2s;
     cursor: pointer;
     letter-spacing: 0.1rem;
 }
 
 .card-btn-like{
-    display: block;
-    width:10%;
+    display: inline-block;
+    width:50%;
     padding:1.5rem;
     font-size: 2rem;
     text-align:center;
-    color: #3363ff;
-    background-color: #d8e0fd;
+    color: #ff0000;
+    background-color: #f0b8c1;
     border:none;
-    border-radius: 0.4rem;
+    border-radius: 10rem;
     transition: 0.2s;
     cursor: pointer;
     letter-spacing: 0.1rem;
