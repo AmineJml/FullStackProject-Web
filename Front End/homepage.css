@@ -110,6 +110,23 @@ body{
 
 }
 
+.card-btn.delete{
+    display: inline-block;
+    float: right;
+    width:20%;
+    padding:0.5rem;
+    font-size: 2rem;
+    text-align:center;
+    color: #f6f6f6;
+    background-color: red;
+    border:none;
+    border-radius: 10rem;
+    transition: 0.2s;
+    cursor: pointer;
+    letter-spacing: 0.1rem;
+
+}
+
 
 /*
 =================================================================================
