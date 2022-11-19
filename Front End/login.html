@@ -1,52 +1,33 @@
 <!DOCTYPE html>
+
 <html>
 
 <head>
-
-    <!-- Local style sheet relative to this file -->
-    <link rel="stylesheet" href="/homepage.css">
-
+    <link rel="stylesheet" href="login.css">
 </head>
 
 <body>
-
-
-
-    <div class="grid">
-        <div class="navbar">
-            <a href="#home">Home</a>
-            <a href="login.html">Profile</a>
-            <a href="#contact">Blocks</a>
-        </div>
-
-
-        <div class="grid-item">
-            <div class="card">
-                <img class="card-img" src="img.jpg" />
-                <div class="card-content">
-                    <h1 class="card-header">Orange </h1>
-                    <button class="card-btn">Comments <button class="card-btn-like">Likes 0 </button> </button>
-                </div>
+    <div class="center">
+        <h1>Login</h1>
+        <form method="post">
+            <div class="txt_field">
+                <input type="text" required>
+                <span></span>
+                <label>Username</label>
             </div>
-        </div>
-        <div class="grid-item">
-            <div class="card">
-                <img class="card-img" src="img2.jpg" />
-                <div class="card-content">
-                    <h1 class="card-header">Orange </h1>
-                    <button class="card-btn">Comments <button class="card-btn-like">Likes 0 </button> </button>
-                </div>
+            <div class="txt_field">
+                <input type="password" required>
+                <span></span>
+                <label>Password</label>
             </div>
-        </div>
-        <div class="grid-item">
-            <div class="card">
-                <img class="card-img" src="img.jpg" />
-                <div class="card-content">
-                    <h1 class="card-header">Orange </h1>
-                    <button class="card-btn">Comments <button class="card-btn-like">Likes 0 </button> </button>
-                </div>
+            <div class="pass">Forgot Password?</div>
+            <input type="submit" value="Login">
+            <div class="signup_link">
+                Not a member? <a href="#">Signup</a>
             </div>
-        </div>
+        </form>
+    </div>
+
 </body>
 
 </html>
