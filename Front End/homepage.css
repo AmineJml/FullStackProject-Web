@@ -157,10 +157,10 @@ body{
     display: block;
     color: #ffffff;
     text-align: center;
-    padding: 14px 96.4px;
+    padding: 14px 58.5px;
     text-decoration: none;
     font-size: 14px;
-    background: linear-gradient(120deg,#a41627, #e5759c);
+    background: rgb(150, 61, 61);
   }
 
   .navbar a:hover {

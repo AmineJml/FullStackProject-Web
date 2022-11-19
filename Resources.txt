@@ -51,3 +51,4 @@ APIs:
 7- AddLike
 8- AddComment
 9- BlockUser
+10- get_blockList (for display)
