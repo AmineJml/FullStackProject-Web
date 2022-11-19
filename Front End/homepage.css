@@ -125,21 +125,43 @@ body{
     width: 50rem;
   }
   
-  .navbar a {
+  .navbar-general {
     float: left;
     display: block;
     color: #f2f2f2;
     text-align: center;
-    padding: 14px 65px;
+    padding: 14px 64px;
     text-decoration: none;
     font-size: 14px;
   }
-  
+
+  .navbar-accountView {
+    float: left;
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 96.4px;
+    text-decoration: none;
+    font-size: 14px;
+    background: linear-gradient(120deg,#a41627, #e5759c);
+  }
+
   .navbar a:hover {
     background: #ddd;
     color: rgb(13, 13, 102);
   }
   
+  .navbar-header{
+    float: center;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 65px;
+    text-decoration: none;
+    font-size: 20;
+
+
+  }
 
 
 
