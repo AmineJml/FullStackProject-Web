@@ -40,12 +40,13 @@ pages:
 		-R BlockList (input obx to block users)
  
 APIs:
-1- Login
-2- Register
-3- EditProfile
-4- get_Images (by User)
-5- get_Comments (by post)
-6- get_LikeCount
+1- Login -COMPLETED
+2- Register -COMPLETED
+3- EditProfile -COMPLETED
+4- get_Images (by User)*
+4*- get_images_id -COMPLETED
+5- get_Comments (by post) -COMPLETED
+6- get_LikeCount -COMPLETED
 6- AddPost
 7- AddLike
 8- AddComment
