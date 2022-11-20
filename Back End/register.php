@@ -15,7 +15,7 @@ if(isset($_POST["FName"]) && $_POST["FName"] != "" && isset($_POST["LName"]) && 
      $response["success"] = false;   
      echo json_encode($response);
      return; 
- }
+}
 
 $query = $mysqli->prepare("Select * from users WHERE Username = ?");
 $query->bind_param("s", $Username);

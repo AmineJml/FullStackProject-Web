@@ -21,9 +21,7 @@ if(isset($_GET["User1_id"]) && $_GET["User1_id"] != "" ){
  $query->execute();
  
  $array = $query->get_result();
- 
  $response = [];
- $response_success = [];
  
  while($accounts = $array->fetch_assoc()){
      $blocks[] = $accounts; //array of the blocks by user1

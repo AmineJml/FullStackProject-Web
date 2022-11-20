@@ -25,7 +25,6 @@ if(isset($_POST["User_id"]) && $_POST["User_id"] != "" && isset($_POST["Image_id
  $array = $query->get_result();
  
  $response = [];
- $response_success = [];
  
  while($likes = $array->fetch_assoc()){
      $is_liked[] = $likes; //array of the blocks by user1

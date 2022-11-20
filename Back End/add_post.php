@@ -20,8 +20,6 @@ $query = $mysqli->prepare("INSERT INTO Images(Image_URL, User_id) VALUES(?, ?)")
 $query->bind_param("si",$Image_URL, $User_id);
 $query->execute();
 
-$array = $query->get_result();
-
 $response = [];
 $response["success"] = "success";
 echo json_encode($response);
