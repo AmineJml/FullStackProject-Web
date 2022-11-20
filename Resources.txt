@@ -1,0 +1,55 @@
+•	Users shall be able to login and register
+•	Users shall be able to post images. All images are visible to everyone in this project.
+•	Users shall be able to like and comment on all images 
+•	Users shall be able to hide images from a specific user 
+•	Users shall be able to delete their posted images 
+•	Users shall be able to edit their profiles 
+
+4 tables:
+Users:
+User_id
+FName
+LName
+Username
+Password
+
+Images:
+User_id
+Image_id
+Like_count
+Image_URL
+
+Comments:
+User_id (posted by)
+Comment_id
+Image_id
+Comment
+
+Visibility
+User1_id
+User2_id
+Set_visibility
+
+pages:
+1-Login
+2- Register
+3- Home scree -> see all posts + username on top + nav bar to accountPage and logout
+4- Account page -> 3 parts (L-M-R)
+		-M Users posts (same as home + add btn for delete-set_to_visible) 
+		-L profile info (edit profile)
+		-R BlockList (input obx to block users)
+ 
+APIs:
+1- login -COMPLETED 
+2- register -COMPLETED 
+3- edit_profile -COMPLETED 
+4- get_Images (by User)*
+5- get_images_id -COMPLETED 
+6- get_Comments (by post) -COMPLETED 
+7- get_Like_count -COMPLETED 
+8- add_post -COMPLETED 
+9- like_post -COMPLETED 
+10-remove_like_post -COMPLETED 
+11- add_comment -COMPLETED
+12- block_user - COMPLETED
+13- get_blockList -COMPLETED
