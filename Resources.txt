@@ -46,10 +46,10 @@ APIs:
 4-a get_Images (by User)*
 4-b get_images_id -COMPLETED
 5- get_Comments (by post) -COMPLETED
-6- get_LikeCount* 
+6- get_Likes* 
 6- add_post -COMPLETED
-7-a add_like*
-7-b remove_like*
+7-a add_like -COMPLETED
+7-b remove_like -COMPLETED
 8- add_comment -COMPLETED
 9- block_user - COMPLETED
 10- get_blockList -COMPLETED

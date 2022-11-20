@@ -15,15 +15,18 @@ if(isset($_GET["Image_id"]) ){
 }
 
 
-$query = $mysqli->prepare("SELECT Like_count FROM images WHERE Image_id = ?");
+$query = $mysqli->prepare("SELECT User_id FROM likes WHERE Image_id = ? && Is_liked = 1");
 $query->bind_param("i", $Image_id);
 $query->execute();
 
-
+$response = [];
 $array = $query->get_result();
-
+$like_count  =0;
 while($Likes = $array->fetch_assoc()){
-    $response[] = $Likes;
+    $like_count = $like_count + 1;
 }
 
-echo json_encode($response);
+
+$response["success"] = true;
+
+echo json_encode($like_count);
