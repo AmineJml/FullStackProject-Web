@@ -1,7 +1,7 @@
 <?php 
 header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Methods: GET, POST');
-header("Access-Control-Allow-Headers: X-Requested-With");
+header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, X-Requested-With");
 
 include("connection.php");
 
@@ -21,7 +21,7 @@ include("connection.php");
 
 //select all users normally without blocks
 
-$query = $mysqli->prepare("Select Image_URL from images ");
+$query = $mysqli->prepare("Select Image_URL, Image_id from images ");
 $query->execute();
 $array = $query->get_result();
 $response = [];
