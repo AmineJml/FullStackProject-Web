@@ -43,12 +43,13 @@ APIs:
 1- Login -COMPLETED
 2- Register -COMPLETED
 3- EditProfile -COMPLETED
-4- get_Images (by User)*
-4*- get_images_id -COMPLETED
+4-a get_Images (by User)*
+4-b get_images_id -COMPLETED
 5- get_Comments (by post) -COMPLETED
-6- get_LikeCount -COMPLETED
+6- get_LikeCount* 
 6- add_post -COMPLETED
-7- add_like*
+7-a add_like*
+7-b remove_like*
 8- add_comment -COMPLETED
-9- block_user
-10- get_blockList (for display)
+9- block_user - COMPLETED
+10- get_blockList -COMPLETED
