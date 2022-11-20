@@ -10,7 +10,7 @@ html{
 }
 
 body{
-    background: rgb(243, 243, 243);
+    background: rgb(255, 255, 255);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,7 +32,7 @@ body{
 }
 
 .grid-item{
-    background-color: #fff;
+    background-color: rgb(188, 214, 213);
     border-radius: 0.4rem;
     overflow: hidden;
     box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
@@ -84,8 +84,8 @@ body{
     padding:1.5rem;
     font-size: 2rem;
     text-align:center;
-    color: #3363ff;
-    background-color: #c6d2ff;
+    color: #ffffff;
+    background-color: #2691d9;
     border:none;
     border-radius: 10rem;
     transition: 0.2s;
@@ -100,8 +100,8 @@ body{
     padding:1.5rem;
     font-size: 2rem;
     text-align:center;
-    color: #ff0000;
-    background-color: #f0b8c1;
+    color: #ffffff;
+    background-color: #d90a2c;
     border:none;
     border-radius: 10rem;
     transition: 0.2s;
@@ -111,7 +111,6 @@ body{
 }
 
 .card-btn.delete{
-    display: inline-block;
     float: right;
     width:20%;
     padding:0.5rem;
