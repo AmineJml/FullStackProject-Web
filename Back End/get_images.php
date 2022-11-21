@@ -21,7 +21,7 @@ include("connection.php");
 
 //select all users normally without blocks
 
-$query = $mysqli->prepare("Select Image_URL, Image_id from images ");
+$query = $mysqli->prepare("Select User_id, Image_URL, Image_id from images ");
 $query->execute();
 $array = $query->get_result();
 $response = [];

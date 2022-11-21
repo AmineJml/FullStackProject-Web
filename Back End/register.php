@@ -1,7 +1,7 @@
 <?php
 header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Methods: GET, POST');
-header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, X-Requested-With");
+header("Access-Control-Allow-Headers: *");
 
 include("connection.php");
 
@@ -31,7 +31,7 @@ while($accounts = $array->fetch_assoc()){
 }
 
 if($users){ //if list is not empty
-    $response["success"] = "user already exit";
+    $response["success"] = "user_already_exit";
     echo json_encode($users);
 }
 
