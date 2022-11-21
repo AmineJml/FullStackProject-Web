@@ -23,7 +23,7 @@ $query->bind_param("si",$Image_URL, $User_id);
 $query->execute();
 
 $response = [];
-$response["success"] = "success";
+$response["success"] = "true";
 echo json_encode($response);
 
 
