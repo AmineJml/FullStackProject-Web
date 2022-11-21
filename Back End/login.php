@@ -10,7 +10,7 @@ if(isset($_POST["Username"]) && $_POST["Username"] != "" && isset($_POST["Passwo
     $Password = $_POST["Password"];
 }else{
      $response = [];
-     $response["success"] = false;   
+     $response["success"] = "false";   
      echo json_encode($response);
      return; 
  }
@@ -31,7 +31,7 @@ if(!$response ){ //list is empty
 
 else{
   
-    $response["success"] = true;   
+    $response["success"] = "true";   
 
 }
 echo json_encode($response);
