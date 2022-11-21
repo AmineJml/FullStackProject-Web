@@ -197,43 +197,71 @@ btn_addImage.addEventListener('click', postImage);
 
 }
 
-workshop_pages.load_post = () => {
-    const btn_addImage = document.getElementById('btn_addImage');
-    const input_addImage_URL = document.getElementById('input_addImage_URL');
-    const check_addPost = document.getElementById('check_addPost')
+workshop_pages.load_block = () => {
+    const btn_block = document.getElementById('btn_block');
+    const input_username_block = document.getElementById('input_username_block');
+    const check_block = document.getElementById('check_block');
+    let list_blocks = {};
+    let list_username_blocks=[];
 
+    let username ={};
+    //=====================================
+    //        getting blockList
+    //=====================================
+    const get_blocks = async () => {
+        const response = await axios.get(
+            base_URL + "get_blocks.php"+ "?User1_id="+localStorage.getItem("User_id")
+            );
 
-    const postImage = async () => {
-        if(input_addImage_URL.value == ''){
-            check_addPost.innerHTML = "Please enter the image URL";
+        list_blocks =  response.data;
+        for(let i =0; i< list_blocks.length+1;i++)
+        {
+            console.log(list_blocks["0"][""+ i +""]["User2_id"])
         }
-        else{
-        let list_post = {};
-        var bodyFormData = new FormData();
-        bodyFormData.append('User_id', localStorage.getItem("User_id"));
-        bodyFormData.append('Image_URL', input_addImage_URL.value);
-        await axios({
-            method: "post",
-            url: "http://localhost/FullStackProject-Web/Back%20End/add_post.php",
-            data: bodyFormData,
-            headers: { "Content-Type": "multipart/form-data" },
-          })
-        .then(function(response){
-            list_post = response.data;
-        })
-        .catch(function(error) {
-            console.log(error);
-        });     
-        if(list_post["success"] == "true"){
-            console.log(list_post)
-            //adding values to local stoarge
-            check_addPost.innerHTML = "Post has been submmitted, add new one?"
-        }
-        };  
-    }
-btn_addImage.addEventListener('click', postImage);
+    };
 
+    const get_username = async () => {
+        const response = await axios.get(
+            base_URL + "get_username.php"+ "?User_id="+localStorage.getItem("User_id")
+            );
+
+        username =  response.data;
+        console.log(username)
+    };
+    get_username();
 }
+    
+//     const postImage = async () => {
+
+//         if(input_addImage_URL.value == ''){
+//             check_addPost.innerHTML = "Please enter the image URL";
+//         }
+//         else{
+//         let list_post = {};
+//         var bodyFormData = new FormData();
+//         bodyFormData.append('User_id', localStorage.getItem("User_id"));
+//         bodyFormData.append('Image_URL', input_addImage_URL.value);
+//         await axios({
+//             method: "post",
+//             url: "http://localhost/FullStackProject-Web/Back%20End/add_post.php",
+//             data: bodyFormData,
+//             headers: { "Content-Type": "multipart/form-data" },
+//           })
+//         .then(function(response){
+//             list_post = response.data;
+//         })
+//         .catch(function(error) {
+//             console.log(error);
+//         });     
+//         if(list_post["success"] == "true"){
+//             console.log(list_post)
+//             //adding values to local stoarge
+//             check_addPost.innerHTML = "Post has been submmitted, add new one?"
+//         }
+//         };  
+//     }
+// btn_addImage.addEventListener('click', postImage);
+
 
 //block.html
 //addPost

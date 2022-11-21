@@ -4,8 +4,7 @@
 
 <head>
     <link rel="stylesheet" href="forms.css">
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="axios.js" defer></script>
+
 </head>
 
 <body>
@@ -13,21 +12,14 @@
         <h1>Block user</h1>
         <form method="post">
             <div class="txt_field">
-                <input type="text" required>
+                <input id="input_username_block" type="text" required>
                 <span></span>
                 <label>Username</label>
             </div>
-
-
-
-
-            <button class="submit"> Submit</button>
+            <button id="btn_block" type="button" class="submit"> Submit</button>
             <div class="Blocks">
                 <h2>Block List</h2>
-                <p>Amine Jamal </br>
-                    Another Name
-                </p>
-
+                <p id="check_block"></p>
             </div>
             <div class="signup_link">
                 Discard operation? go back to <a href="accountView.html">Account</a>
@@ -35,6 +27,12 @@
 
         </form>
     </div>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="axios.js"></script>
+    <script>
+        workshop_pages.loadFor("block");
+    </script>
 
 </body>
 

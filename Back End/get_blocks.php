@@ -8,7 +8,6 @@ include("connection.php");
 if(isset($_GET["User1_id"]) && $_GET["User1_id"] != "" ){
     $User1_id = $_GET["User1_id"];
 
-
 }else{
      $response = [];
      $response["success"] = false;   
