@@ -4,8 +4,7 @@
 
 <head>
     <link rel="stylesheet" href="forms.css">
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="axios.js" defer></script>
+
 
 </head>
 
@@ -15,44 +14,46 @@
         <h1>Edit profile</h1>
         <form method="post">
             <div class="txt_field">
-                <input type="text" required>
+                <input id="input_FName_edit" type="text" required>
                 <span></span>
                 <label>First Name</label>
             </div>
             <div class="txt_field">
-                <input type="text" required>
+                <input id="input_LName_edit" type="text" required>
                 <span></span>
                 <label>Last Name</label>
             </div>
             <div class="txt_field">
-                <input type="text" required>
+                <input id="input_Username_edit" type="text" required>
                 <span></span>
                 <label>Username</label>
             </div>
+
             <div class="txt_field">
-                <input type="password" required>
-                <span></span>
-                <label>Old Password</label>
-            </div>
-            <div class="txt_field">
-                <input type="password" required>
+                <input id="input_PasswordNew_edit" type="password" required>
                 <span></span>
                 <label>New Password</label>
             </div>
             <div class="txt_field">
-                <input type="password" required>
+                <input id="input_PasswordConf_edit" type="password" required>
                 <span></span>
                 <label>Confirm Password</label>
             </div>
-
-            <button class="submit"> Apply changes</button>
+            <div>
+                <label class="red" id="check_editProfile"></label>
+            </div>
+            <button id="btn_editProfile" type="button" class="submit"> Apply changes</button>
             <div class="signup-lin"></div>
             <div class="signup_link">
                 Discard operation? go back to <a href="accountView.html">Account</a>
             </div>
         </form>
     </div>
-
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="axios.js"></script>
+    <script>
+        workshop_pages.loadFor("editProfile");
+    </script>
 </body>
 
 </html>

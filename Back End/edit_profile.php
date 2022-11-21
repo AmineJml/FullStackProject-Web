@@ -20,11 +20,34 @@ else{
     return; 
 }
 
-$query = $mysqli->prepare("UPDATE users SET Username=?, FName=? , LName=?, Password=? WHERE User_id=?");
-$query->bind_param("ssssi", $Username, $FName, $LName, $Password, $User_id);
+
+$query = $mysqli->prepare("Select * from users WHERE Username = ?");
+$query->bind_param("s", $Username);
 $query->execute();
 
-$response = [];
-$response["success"] = true;
+$array = $query->get_result();
 
-echo json_encode($response);
+$response = [];
+$response_success = [];
+
+while($accounts = $array->fetch_assoc()){
+    $users[] = $accounts;
+}
+
+if($users){ //if list is not empty
+    $response["success"] = "user_already_exit";
+    echo json_encode($response);
+}
+
+else{
+    $query = $mysqli->prepare("UPDATE users SET Username=?, FName=? , LName=?, Password=? WHERE User_id=?");
+    $query->bind_param("ssssi", $Username, $FName, $LName, $Password, $User_id);
+    $query->execute();
+    $response = [];
+    $response["success"] = true;
+    echo json_encode($response);
+}
+
+
+
+
